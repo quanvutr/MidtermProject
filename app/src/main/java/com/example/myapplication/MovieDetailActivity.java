@@ -33,7 +33,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         Glide.with(this).load(imageCover).into(MovieCoverImg);
         tv_title = findViewById(R.id.detail_movie_title);
         tv_description = findViewById(R.id.detail_movie_desc);
-
+        tv_title.setText(movieTitle);
 
     }
 }
