@@ -75,7 +75,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Đạo diễn: "
+            android:text="Director: "
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_movie_image" />
@@ -87,7 +87,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Thể loại: "
+            android:text="Genre: "
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />

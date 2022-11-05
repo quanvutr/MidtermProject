@@ -1,32 +1,16 @@
 package com.example.myapplication.model;
 
 public class BannerMovies {
-    Integer id;
-    String movieName;
     String imageUrl;
-    String fileUrl;
+    int imageBanner;
 
-    public BannerMovies(Integer id, String movieName, String imageUrl, String fileUrl) {
-        this.id = id;
-        this.movieName = movieName;
+    public BannerMovies(int imageBanner) {
+        this.imageBanner = imageBanner;
+    }
+
+    public BannerMovies(String imageUrl, int imageBanner) {
         this.imageUrl = imageUrl;
-        this.fileUrl = fileUrl;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getMovieName() {
-        return movieName;
-    }
-
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
+        this.imageBanner = imageBanner;
     }
 
     public String getImageUrl() {
@@ -37,11 +21,7 @@ public class BannerMovies {
         this.imageUrl = imageUrl;
     }
 
-    public String getFileUrl() {
-        return fileUrl;
-    }
+    public int getImageBanner() { return imageBanner; }
 
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-    }
+    public void setImageBanner(int imageBanner) { this.imageBanner = imageBanner; }
 }

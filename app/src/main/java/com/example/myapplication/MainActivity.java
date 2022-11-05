@@ -42,27 +42,26 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         secondTab = findViewById(R.id.tabLayout);
 
         bannerMoviesList = new ArrayList<>();
-        bannerMoviesList.add(new BannerMovies(1, "Naruto Movie - The Last", "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/c62f3b44c06c98c5d9a93f4da93281d6.jpeg", ""));
-        bannerMoviesList.add(new BannerMovies(2, "Harry Potter", "https://www.vintagemovieposters.co.uk/wp-content/uploads/2015/07/hpphilosopherquadlarge1.jpg", ""));
-        bannerMoviesList.add(new BannerMovies(3, "The Lord of The Rings", "https://www.vintagemovieposters.co.uk/wp-content/uploads/2015/07/hpphilosopherquadlarge1.jpg", ""));
-        bannerMoviesList.add(new BannerMovies(4, "The Lord of The Rings", "https://www.themedievallife.com/wp-content/uploads/2001/12/The-Lord-of-the-Rings-The-Fellowship-of-the-Ring-0051.jpg", ""));
-        bannerMoviesList.add(new BannerMovies(5, "The Lord of The Rings", "https://www.vintagemovieposters.co.uk/wp-content/uploads/2015/07/hpphilosopherquadlarge1.jpg", ""));
+        bannerMoviesList.add(new BannerMovies(R.drawable.banner1));
+        bannerMoviesList.add(new BannerMovies(R.drawable.banner2));
+        bannerMoviesList.add(new BannerMovies(R.drawable.banner3));
+        bannerMoviesList.add(new BannerMovies(R.drawable.banner4));
 
         setBannerMoviesPagerAdapter(bannerMoviesList);
 
         moviesList = new ArrayList<>();
-        moviesList.add(new Movie("Black Adam", R.drawable.black_adam, R.drawable.bg_blackadam, "Adam", "Action", "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI", "Dwayne Johnson sẽ góp mặt trong tác phẩm hành động  phiêu lưu mới của New Line Cinema, mang tên BLACK ADAM. Đây là bộ phim đầu tiên trên màn ảnh rộng khai thác câu chuyện của siêu anh hùng DC này, dưới sự sáng tạo của đạo diễn Jaume Collet-Serra (đạo diễn của Jungle Cruise). Gần 5.000 năm sau khi bị cầm tù với quyền năng tối thượng từ những vị thần cổ đại, Black Adam (Dwayne Johnson) sẽ được giải phóng khỏi nấm mồ chết chóc của mình, mang tới thế giới hiện đại một kiểu nhận thức về công lý hoàn toàn mới."));
-        moviesList.add(new Movie("Lời Nguyền Tầm Da", R.drawable.curse));
-        moviesList.add(new Movie("Cô Gái Đến Từ Quá Khứ", R.drawable.girlpass));
-        moviesList.add(new Movie("Gulliver Du Ký", R.drawable.gulliver));
+        moviesList.add(new Movie("Black Adam", R.drawable.black_adam, R.drawable.bg_blackadam, "Jaume Collet-Serra", "Action", "C13 - NO CHILDREN UNDER 13 YEARS OLD", "From New Line Cinema, Dwayne Johnson stars in the action adventure “Black Adam.” The first-ever feature film to explore the story of the DC Super Hero comes to the big screen under the direction of Jaume Collet-Serra (“Jungle Cruise”). Nearly 5,000 years after he was bestowed with the almighty powers of the ancient gods—and imprisoned just as quickly—Black Adam (Johnson) is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world."));
+        moviesList.add(new Movie("The Evil Eye (Mal de Ojo)", R.drawable.curse, R.drawable.bg_evileye, "Isaac Ezban", "Horror", "C18 - NO CHILDREN UNDER 18 YEARS OLD", "Nala, a 13-year-old girl from the city, travels with her family to her grandmother´s home in the countryside, to try to find a cure for her little sister´s mysterious illness… But she´ll soon find her granny is not exactly what she seems…"));
+        moviesList.add(new Movie("Girl From The Past", R.drawable.girlpass, R.drawable.bg_girl,  "Bảo Nhân & Namcito", "Drama, Mystery, Thriller", "C18 - NO CHILDREN UNDER 18 YEARS OLD", "When a famous celebrity with a dark past meets an old friend from 15 years ago, secrets start to come back from the grave…"));
+        moviesList.add(new Movie("Gulliver Returns", R.drawable.gulliver, R.drawable.bg_gulliver,  "Ilya Maksimov", "Animation", " P - GENERAL MOVIE TO ALL CUSTOMERS", "The legendary Gulliver returns to the Kingdom of Lilliput, but he is not the giant they remember."));
 
         setMoviesPagerAdapter(moviesList);
 
         moviescomesoonList = new ArrayList<>();
-        moviescomesoonList.add(new Movie("Harry Potter Và Chiếc Cốc Lửa", R.drawable.harrypotter));
-        moviescomesoonList.add(new Movie("Lyle Chú Cá Sấu Biết Hát", R.drawable.lyle));
-        moviescomesoonList.add(new Movie("Chiến Binh Báo Đen 2: Wakanda Bất Diệt", R.drawable.wakanda));
-        moviescomesoonList.add(new Movie("One Piece Film Red", R.drawable.onepiece));
+        moviescomesoonList.add(new Movie("Harry Potter And The Goblet Of Fire (Re-Run)", R.drawable.harrypotter, R.drawable.bg_potter, "Mike Newell", "Adventure, Fantasy", "P - GENERAL MOVIE TO ALL CUSTOMERS", "The fourth movie in the Harry Potter franchise sees Harry (Daniel Radcliffe) returning for his fourth year at Hogwarts School of Witchcraft and Wizardry, along with his friends, Ron (Rupert Grint) and Hermione (Emma Watson). There is an upcoming tournament between the three major schools of magic, with one participant selected from each school by the Goblet of Fire. When Harry's name is drawn, even though he is not eligible and is a fourth player, he must compete in the dangerous contest."));
+        moviescomesoonList.add(new Movie("Lyle Crocodile", R.drawable.lyle, R.drawable.bg_lyle, "Will Speck, Josh Gordon", "Animation", "P - GENERAL MOVIE TO ALL CUSTOMERS", "Based on the best-selling book series by Bernard Waber, Lyle, Lyle, Crocodile is a live-action / CGI musical comedy that brings this beloved character to a new, global audience. When the Primm family (Constance Wu, Scoot McNairy, Winslow Fegley) moves to New York City, their young son Josh struggles to adapt to his new school and new friends. All of that changes when he discovers Lyle - a singing crocodile (Shawn Mendes) who loves baths, caviar and great music-living in the attic of his new home. The two become fast friends, but when Lyle’s existence is threatened by evil neighbor Mr. Grumps (Brett Gelman), the Primm’s must band together with Lyle’s charismatic owner, Hector P. Valenti (Javier Bardem), to show the world that family can come from the most unexpected places and there’s nothing wrong with a big singing crocodile with an even bigger personality. Lyle, Lyle, Crocodile will feature original songs performed by Shawn Mendes and written by the songwriting team behind The Greatest Showman, Benj Pasek & Justin Paul."));
+        moviescomesoonList.add(new Movie("Black Panther: Wakanda Forever", R.drawable.wakanda, R.drawable.bg_wakanda, "Ryan Coogler", "Action, Adventure, Drama", "C13 - NO CHILDREN UNDER 13 YEARS OLD", "Queen Ramonda (Angela Bassett), Shuri (Letitia Wright), M’Baku (Winston Duke), Okoye (Danai Gurira) and the Dora Milaje (including Florence Kasumba), fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia (Lupita Nyong’o) and Everett Ross (Martin Freeman) and forge a new path for the kingdom of Wakanda."));
+        moviescomesoonList.add(new Movie("One Piece Film Red", R.drawable.onepiece, R.drawable.bg_op, "Gorō Taniguchi", "Animation", "C13 - NO CHILDREN UNDER 13 YEARS OLD", "Uta —the most beloved singer in the world. Her voice, which she sings with while concealing her true identity, has been described as “otherworldly.” She will appear in public for the first time at a live concert. As the venue fills with all kinds of Uta fans —excited pirates, the Navy watching closely, and the Straw Hats led by Luffy who simply came to enjoy her sonorous performance —the voice that the whole world has been waiting for is about to resound. The story begins with the shocking fact that she is Shanks' daughter."));
 
         secondTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
