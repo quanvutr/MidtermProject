@@ -9,6 +9,19 @@ public class Movie {
     String rating;
     String streamingLink;
     int coverPhoto;
+    String Director;
+    String Type;
+    String Rated;
+
+    public Movie(String title, int thumbnail, int coverPhoto, String director, String type, String rated, String description) {
+        this.title = title;
+        this.thumbnail = thumbnail;
+        this.coverPhoto = coverPhoto;
+        Director = director;
+        Type = type;
+        Rated = rated;
+        this.description = description;
+    }
 
     public Movie(String title, int thumbnail, int coverPhoto) {
         this.title = title;
@@ -94,5 +107,29 @@ public class Movie {
 
     public void setStreamingLink(String streamingLink) {
         this.streamingLink = streamingLink;
+    }
+
+    public String getDirector() {
+        return Director;
+    }
+
+    public void setDirector(String director) {
+        Director = director;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
+    }
+
+    public String getRated() {
+        return Rated;
+    }
+
+    public void setRated(String rated) {
+        Rated = rated;
     }
 }

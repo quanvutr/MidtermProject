@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         setBannerMoviesPagerAdapter(bannerMoviesList);
 
         moviesList = new ArrayList<>();
-        moviesList.add(new Movie("Black Adam", R.drawable.black_adam, R.drawable.bg_blackadam));
+        moviesList.add(new Movie("Black Adam", R.drawable.black_adam, R.drawable.bg_blackadam, "Adam", "Action", "C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI", "Dwayne Johnson sẽ góp mặt trong tác phẩm hành động  phiêu lưu mới của New Line Cinema, mang tên BLACK ADAM. Đây là bộ phim đầu tiên trên màn ảnh rộng khai thác câu chuyện của siêu anh hùng DC này, dưới sự sáng tạo của đạo diễn Jaume Collet-Serra (đạo diễn của Jungle Cruise). Gần 5.000 năm sau khi bị cầm tù với quyền năng tối thượng từ những vị thần cổ đại, Black Adam (Dwayne Johnson) sẽ được giải phóng khỏi nấm mồ chết chóc của mình, mang tới thế giới hiện đại một kiểu nhận thức về công lý hoàn toàn mới."));
         moviesList.add(new Movie("Lời Nguyền Tầm Da", R.drawable.curse));
         moviesList.add(new Movie("Cô Gái Đến Từ Quá Khứ", R.drawable.girlpass));
         moviesList.add(new Movie("Gulliver Du Ký", R.drawable.gulliver));
@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         intent.putExtra("title", movie.getTitle());
         intent.putExtra("imgUrl", movie.getThumbnail());
         intent.putExtra("imgCover", movie.getCoverPhoto());
+        intent.putExtra("director", movie.getDirector());
+        intent.putExtra("type", movie.getType());
+        intent.putExtra("rated", movie.getRated());
+        intent.putExtra("description", movie.getDescription());
 
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, movieImageView, "sharedName");
         startActivity(intent, options.toBundle());
