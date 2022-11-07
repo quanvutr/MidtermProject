@@ -36,6 +36,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         myViewHolder.TvTitle.setText(movieList.get(i).getTitle());
         myViewHolder.ImgMovie.setImageResource(movieList.get(i).getThumbnail());
+        myViewHolder.TvRating.setText(String.valueOf(movieList.get(i).getRating()));
 //        Glide.with(context).load(movieList.get(i).getImageUrl()).into((ImageView) myViewHolder.itemView);
     }
 
@@ -45,7 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView TvTitle;
+        TextView TvTitle, TvRating;
         ImageView ImgMovie;
 
         public MyViewHolder(@NonNull View itemView){
@@ -53,6 +54,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 
             TvTitle = itemView.findViewById(R.id.movie_title);
             ImgMovie = itemView.findViewById(R.id.movie_image);
+            TvRating = itemView.findViewById(R.id.movie_rating);
 
             itemView.setOnClickListener(v -> movieItemClickListener.onMovieClick(movieList.get(getAdapterPosition()), ImgMovie));
         }
