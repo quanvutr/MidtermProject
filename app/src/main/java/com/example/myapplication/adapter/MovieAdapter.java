@@ -54,12 +54,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
             TvTitle = itemView.findViewById(R.id.movie_title);
             ImgMovie = itemView.findViewById(R.id.movie_image);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    movieItemClickListener.onMovieClick(movieList.get(getAdapterPosition()), ImgMovie);
-                }
-            });
+            itemView.setOnClickListener(v -> movieItemClickListener.onMovieClick(movieList.get(getAdapterPosition()), ImgMovie));
         }
     }
 }

@@ -2,8 +2,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,11 +15,17 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     private ImageView MovieThumbnailImg, MovieCoverImg;
     private TextView tv_title, tv_description, tv_director, tv_type, tv_rated;
+    private ImageButton iB;
+    private boolean isFavor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
+        iB = findViewById(R.id.imageButton);
+        iB.setOnClickListener(v -> {
+            isFavor = !isFavor;
+        });
 
         iniViews();
     }
@@ -49,7 +57,13 @@ public class MovieDetailActivity extends AppCompatActivity {
         String movieDesc = getIntent().getExtras().getString("description");
         tv_description = findViewById(R.id.detail_movie_desc);
         tv_description.setText(movieDesc);
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("favor",isFavor);
+        setResult(RESULT_OK,intent);
+        finish();
     }
 }
